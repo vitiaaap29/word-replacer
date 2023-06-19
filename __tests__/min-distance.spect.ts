@@ -11,4 +11,24 @@ describe('sum module', () => {
     const distance = minimalDistance('wordone', 'wordtwo');
     expect(distance).toBe(3);
   });
+
+  test('aaaa -> bb should be 4 operations', () => {
+    const distance = minimalDistance('aaaa', 'bb');
+    expect(distance).toBe(4);
+  });
+
+  test('a -> "" should be 1 operations', () => {
+    const distance = minimalDistance('a', '');
+    expect(distance).toBe(1);
+  });
+
+  test('abc -> "" should be 3 operations', () => {
+    const distance = minimalDistance('abc', '');
+    expect(distance).toBe(3);
+  });
+
+  test('abc -> "la-b-la" should be 5 operations', () => {
+    const distance = minimalDistance('abc', 'la-b-la');
+    expect(distance).toBe(5);
+  });
 });
