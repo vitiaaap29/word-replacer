@@ -31,4 +31,14 @@ describe('sum module', () => {
     const distance = minimalDistance('abc', 'la-b-la');
     expect(distance).toBe(5);
   });
+
+  test('"" -> abcd', () => {
+    const distance = minimalDistance('', 'abcd');
+    expect(distance).toBe(4);
+  });
+
+  test('"" -> *=e-=2!@', () => {
+    const distance = minimalDistance('', '*=e-=2!@');
+    expect(distance).toBe(8);
+  });
 });
