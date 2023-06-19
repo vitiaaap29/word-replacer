@@ -6,4 +6,9 @@ describe('sum module', () => {
     const distance = minimalDistance('a', 'b');
     expect(distance).toBe(1);
   });
+
+  test('wordone -> wordtwo should be 3 operations', () => {
+    const distance = minimalDistance('wordone', 'wordtwo');
+    expect(distance).toBe(3);
+  });
 });

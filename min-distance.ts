@@ -8,7 +8,7 @@ const insertIntoArray = (arr, index, newItem) => [
 ]
 
 
-export const minimalDistance = (word1, word2) => {
+export const minimalDistance = (word1, word2): number => {
     const n = word1.length;
     const m = word2.length;
     const dp = Array(n);
@@ -32,6 +32,7 @@ export const minimalDistance = (word1, word2) => {
     }
 
     let distance = getDp(n - 1, m - 1, dp);
+    const resultDistance = distance;
     console.log(distance);
     let curI = n - 1;
     let curJ = m - 1;
@@ -65,5 +66,5 @@ export const minimalDistance = (word1, word2) => {
         }
     }
 
-    return distance;
+    return resultDistance;
 };
