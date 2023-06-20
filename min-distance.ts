@@ -38,6 +38,12 @@ export const minimalDistance = (firstWord: string, secondWord: string): ITransfo
         }
     }
 
+    if (secondWord === '') {
+        return {
+            countOperations: m, resultWord: '',
+        }
+    }
+
     const getDp = (i, j, dp) => {
         if (i < 0 && j < 0) return 0;
         if (i < 0) return j + 1;
