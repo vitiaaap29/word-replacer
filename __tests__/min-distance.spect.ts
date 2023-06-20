@@ -14,31 +14,31 @@ describe('Min distance', () => {
     expect(resultWord).toEqual('wordtwo');
   });
 
-  test.skip('aaaa -> bb should be 4 operations', () => {
+  test('aaaa -> bb should be 4 operations', () => {
     const { countOperations, resultWord } = minimalDistance('aaaa', 'bb');
     expect(countOperations).toBe(4);
     expect(resultWord).toEqual('bb');
   });
 
-  test.skip('a -> "" should be 1 operations', () => {
+  test('a -> "" should be 1 operations', () => {
     const { countOperations, resultWord } = minimalDistance('a', '');
     expect(countOperations).toBe(1);
     expect(resultWord).toEqual('');
   });
 
-  test.skip('abc -> "" should be 3 operations', () => {
+  test('abc -> "" should be 3 operations', () => {
     const { countOperations, resultWord } = minimalDistance('abc', '');
     expect(countOperations).toBe(3);
     expect(resultWord).toEqual('');
   });
 
-  test.skip('abc -> "la-b-la" should be 5 operations', () => {
+  test('abc -> "la-b-la" should be 5 operations', () => {
     const { countOperations, resultWord } = minimalDistance('abc', 'la-b-la');
     expect(countOperations).toBe(5);
     expect(resultWord).toEqual('la-b-la');
   });
 
-  test.skip('"" -> abcd', () => {
+  test('"" -> abcd', () => {
     const { countOperations, resultWord } = minimalDistance('', 'abcd');
     expect(countOperations).toBe(4);
     expect(resultWord).toEqual('abcd');
