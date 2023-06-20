@@ -62,7 +62,6 @@ export const minimalDistance = (firstWord: string, secondWord: string): ITransfo
     let curJ = m - 1;
     let curWord = Array.from(firstWord);
 
-    console.log('START WORD -> ', curWord.join(''));
     for (let operationCounter = 1; distance > 0; operationCounter++) {
         const del = getDp(curI, curJ - 1, dp);
         const insert = getDp(curI - 1, curJ, dp);
@@ -84,11 +83,7 @@ export const minimalDistance = (firstWord: string, secondWord: string): ITransfo
             curI -= 1;
             curJ -= 1;
         }
-
-        console.log('operationCounter => ', operationCounter, '   ', curWord.join(''));
     }
-
-    console.log('END word -> ', curWord.join(''));
 
     return  { countOperations, resultWord: curWord.join('') };
 };
